@@ -3,7 +3,7 @@ name: Deploy SST
 on:
   push:
     branches:
-      - master
+      - feature/sst
 
 permissions:
   id-token: write # This is required for requesting the JWT
@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Test
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/feature/sst'
         run: |
           echo "jalanbro"
